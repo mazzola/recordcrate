@@ -7,27 +7,99 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ page_title }}</title>
+    <!-- Bootstrap -->
+    <link href="{{ static_url("css/bootstrap.min.css") }}" rel="stylesheet" media="screen">
     <link rel="stylesheet" href="{{ static_url("css/style.css") }}" />
     <link rel="stylesheet" href="{{ static_url("css/libs/normalize/normalize.css") }}" />
-    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!-- Custom CSS styling -->
+    <link rel="stylesheet" href="{{ static_url("css/style.css") }}" />
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
-        <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+      <script src="../../assets/js/html5shiv.js"></script>
+      <script src="../../assets/js/respond.min.js"></script>
     <![endif]-->
 </head>
-<body>
+<!-- NAVBAR
+================================================== -->
+  <body>
+    <div class="navbar-wrapper">
+      <div class="container">
 
-    <header>
-    </header><!-- end header -->
+        <div class="navbar navbar-inverse navbar-static-top">
+          <div class="container">
+            <div class="navbar-header">
+              <a class="navbar-brand" href="#">Record Crate</a>
+            </div>
+          </div>
+        </div>
 
-    <div id="main">
-        <div id="container">
-            <h1>{{ page_heading }}</h1>
-        </div><!-- end container -->
-    </div><!-- end main -->
+      </div>
+    </div>
 
-    <footer>
-    </footer><!-- end footer -->
+
+    <!-- Carousel
+    ================================================== -->
+    <div id="myCarousel" class="carousel slide">
+      <!-- Indicators -->
+      <ol class="carousel-indicators">
+        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+        <li data-target="#myCarousel" data-slide-to="1"></li>
+      </ol>
+      <div class="carousel-inner">
+        <div class="item active">
+          <img src="{{ static_url("img/recordbin.jpg") }}" data-src="holder.js/100%x500/auto/#777:#7a7a7a/text:Great Music" alt="Great Music">
+          <div class="container">
+            <div class="carousel-caption">
+              <h1>Digital crates of music from your new favorite bands.</h1>
+              <p><a class="btn btn-lg btn-primary" href="#">Sign up today</a></p>
+            </div>
+          </div>
+        </div>
+        <div class="item">
+          <img src="{{ static_url("img/recordplayer.jpg") }}" data-src="holder.js/100%x500/auto/#777:#7a7a7a/text:New Music" alt="New Music">
+          <div class="container">
+            <div class="carousel-caption">
+              <h1>Support artists while discovering awesome new music.</h1>
+              <p><a class="btn btn-lg btn-primary" href="#">Learn more</a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <a class="left carousel-control" href="#myCarousel" data-slide="prev"><span class="glyphicon glyphicon-chevron-left"></span></a>
+      <a class="right carousel-control" href="#myCarousel" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></span></a>
+    </div><!-- /.carousel -->
+
+
+
+    <!-- Marketing messaging and featurettes
+    ================================================== -->
+    <!-- Wrap the rest of the page in another container to center all the content. -->
+
+    <div class="container marketing">
+
+      <!-- Three columns of text below the carousel -->
+      <div class="row">
+        <div class="col-lg-4">
+          <img class="img-circle" src="{{ static_url("img/band.jpg") }}" data-src="holder.js/140x140" alt="Generic placeholder image">
+          <h2>We find the bands.</h2>
+          <p>We work hard to scour the web, go to as many shows as possible, and generally just keep an ear up to the music scene
+            in order to discover the best new bands for you.</p>
+        </div><!-- /.col-lg-4 -->
+        <div class="col-lg-4">
+          <img class="img-circle" src="{{ static_url("img/crate.jpg") }}" data-src="holder.js/140x140" alt="Generic placeholder image">
+          <h2>We make a crate.</h2>
+          <p>Once we find a bunch of awesome new bands, we put their latests albums into a crate. Think of crates as just a big bundle
+            of digital music joy. You can get your crate in MP3, FLAC, or whatever.</p>
+        </div><!-- /.col-lg-4 -->
+        <div class="col-lg-4">
+          <img class="img-circle" src="{{ static_url("img/give.jpg") }}" data-src="holder.js/140x140" alt="Generic placeholder image">
+          <h2>We give it to you!</h2>
+          <p>Once you open up your crate, we know  you'll find something you'll love. Plus you're directly supporting the up and coming artists
+            create more incredible music.</p>
+        </div><!-- /.col-lg-4 -->
+      </div><!-- /.row -->
 
     <!-- Load jQuery -->
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
@@ -35,6 +107,7 @@
 
     <!-- plugins -->
     <script src="{{ static_url("js/plugins.js") }}"></script>
+    <script src="{{ static_url("js/bootstrap.min.js") }}"></script>
 
     <!-- main script -->
     <script src="{{ static_url("js/script.js") }}"></script>

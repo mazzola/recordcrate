@@ -18,6 +18,7 @@ import tornado.web
 # import and define tornado-y things
 from tornado.options import define
 define("port", default=5000, help="run on the given port", type=int)
+os.environ['GOOGLEANALYTICSID'] = 'UA-42448838-1'
 
 
 # application settings and handle mapping info
@@ -44,8 +45,8 @@ class MainHandler(tornado.web.RequestHandler):
 
         self.render(
             "main.html",
-            page_title='Heroku Funtimes',
-            page_heading='Hi!',
+            page_title='RecordCrate',
+            page_heading='Hello, world!',
             google_analytics_id=google_analytics_id,
         )
 
